@@ -1,0 +1,57 @@
+[
+    {
+        "parent_code": "ATS",
+        "code": "ATSAC",
+        "description": "Status Aktif"
+    },
+    {
+        "parent_code": "ATS",
+        "code": "ATSNA",
+        "description": "Status Non Aktif"
+    },
+    {
+        "parent_code": "OPT",
+        "code": "OPTNO",
+        "description": "Tidak"
+    },
+    {
+        "parent_code": "OPT",
+        "code": "OPTYS",
+        "description": "Ya"
+    },
+    {
+        "parent_code": "ANS",
+        "code": "ANSMC",
+        "description": "Pilihan Ganda"
+    },
+    {
+        "parent_code": "ANS",
+        "code": "ANSES",
+        "description": "Essay"
+    },
+    {
+        "parent_code": "ANS",
+        "code": "ANSUF",
+        "description": "Upload File"
+    },
+    {
+        "parent_code": "ANS",
+        "code": "ANSLC",
+        "description": "Dinilai Langsung Oleh Asisten"
+    },
+    {
+        "parent_code": "ROL",
+        "code": "ROLAD",
+        "description": "Admin"
+    },
+    {
+        "parent_code": "ROL",
+        "code": "ROLAS",
+        "description": "Asisten"
+    },
+    {
+        "parent_code": "ROL",
+        "code": "ROLPR",
+        "description": "Praktikan"
+    }
+]

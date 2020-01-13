@@ -1,0 +1,44 @@
+[
+    {
+        "nim": 1202174082,
+        "name": "Umi Zahroh",
+        "class": "SI4101",
+        "assistant_code": "ZAH",
+        "role": "ROLAD"
+    },
+    {
+        "nim": 1202170118,
+        "name": "Lukman Riyadi",
+        "class": "SI4103",
+        "assistant_code": "LKM",
+        "role": "ROLAD"
+    },
+    {
+        "nim": 1202184143,
+        "name": "Arddhana Zhafran Amanullah",
+        "class": "SI4209",
+        "assistant_code": "ZAF",
+        "role": "ROLAD"
+    },
+    {
+        "nim": 1202184189,
+        "name": "Agriva Detta Ginting",
+        "class": "SI4208",
+        "assistant_code": "GIP",
+        "role": "ROLAD"
+    },
+    {
+        "nim": 1202183322,
+        "name": "Rizalrasyd Dwiselia Ridwanah",
+        "class": "SI4202",
+        "assistant_code": "ZAY",
+        "role": "ROLAD"
+    },
+    {
+        "nim": 1202181065,
+        "name": "Zahwa Alifah Ammatullah",
+        "class": "SI4208",
+        "assistant_code": "ZAW",
+        "role": "ROLAD"
+    }
+]
