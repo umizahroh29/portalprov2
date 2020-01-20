@@ -23,4 +23,6 @@ Route::post('users/update-password', 'UserController@updatePassword')->name('use
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/dashboard', 'HomeController@index')->name('dashboard');
     Route::resource('practicums', 'PracticumController')->except(['show']);
+
+    Route::resource('module_assessments', 'ModuleAssessmentController')->except(['show']);
 });

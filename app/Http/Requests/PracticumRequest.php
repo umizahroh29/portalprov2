@@ -40,6 +40,7 @@ class PracticumRequest extends FormRequest
                 'assessments.*.question_count' => 'required|integer',
                 'assessments.*.answer_type' => 'required|exists:mastercodes,code',
                 'assessments.*.isOnline' => 'nullable|string',
+                'assessments.*.isSoftFileQuestion' => 'nullable|string',
             ];
         } else {
             return [

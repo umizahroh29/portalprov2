@@ -1,0 +1,22 @@
+[
+    {
+        "user_nim": 1202180001,
+        "assistant_code": "AAA",
+        "role": "ROLAS"
+    },
+    {
+        "user_nim": 1202180002,
+        "assistant_code": "BBB",
+        "role": "ROLAS"
+    },
+    {
+        "user_nim": 1202190001,
+        "assistant_code": null,
+        "role": "ROLPR"
+    },
+    {
+        "user_nim": 1202190002,
+        "assistant_code": null,
+        "role": "ROLPR"
+    }
+]

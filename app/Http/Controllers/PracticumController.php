@@ -53,14 +53,11 @@ class PracticumController extends Controller
      */
     public function store(PracticumRequest $request)
     {
-//        dd($request);
         $validated = $request->validated();
-//        dd($validated);
 
         DB::beginTransaction();
         try {
             $practicum = Practicum::create($validated);
-//            dd($practicum);
 
             if (is_array($validated['modules'])) {
                 foreach ($validated['modules'] as $module) {

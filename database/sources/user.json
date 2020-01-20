@@ -40,5 +40,47 @@
         "class": "SI4208",
         "assistant_code": "ZAW",
         "role": "ROLAD"
+    },
+    {
+        "nim": 1202190001,
+        "name": "Praktikan 1",
+        "class": "SI4301",
+        "assistant_code": null,
+        "role": "ROLPR"
+    },
+    {
+        "nim": 1202190002,
+        "name": "Praktikan 2",
+        "class": "SI4301",
+        "assistant_code": null,
+        "role": "ROLPR"
+    },
+    {
+        "nim": 1202190003,
+        "name": "Praktikan 3",
+        "class": "SI4301",
+        "assistant_code": null,
+        "role": "ROLPR"
+    },
+    {
+        "nim": 1202180001,
+        "name": "Asisten 1",
+        "class": "SI4201",
+        "assistant_code": "AAA",
+        "role": "ROLAS"
+    },
+    {
+        "nim": 1202180002,
+        "name": "Asisten 2",
+        "class": "SI4201",
+        "assistant_code": "BBB",
+        "role": "ROLAS"
+    },
+    {
+        "nim": 1202180003,
+        "name": "Asisten 3",
+        "class": "SI4201",
+        "assistant_code": "CCC",
+        "role": "ROLAS"
     }
 ]

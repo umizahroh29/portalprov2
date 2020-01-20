@@ -1,0 +1,22 @@
+[
+    {
+        "name": "ERD",
+        "module_link": "bit.ly/ERD",
+        "grade_publish_date": "2020-01-24 09:30:00"
+    },
+    {
+        "name": "Normalisasi",
+        "module_link": "bit.ly/Normalisasi",
+        "grade_publish_date": "2020-02-01 09:30:00"
+    },
+    {
+        "name": "DDL",
+        "module_link": "bit.ly/DDL",
+        "grade_publish_date": "2020-02-08 09:30:00"
+    },
+    {
+        "name": "DML",
+        "module_link": "bit.ly/DML",
+        "grade_publish_date": "2020-02-15 09:30:00"
+    }
+]

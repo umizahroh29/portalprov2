@@ -17,7 +17,7 @@ class CreatePracticumUsersTable extends Migration
             $table->uuid('id')->primary();
             $table->uuid('practicum_id');
             $table->integer('user_nim');
-            $table->char('assistant_code', 3);
+            $table->char('assistant_code', 3)->nullable();
             $table->char('role', 5);
             $table->timestamps();
 

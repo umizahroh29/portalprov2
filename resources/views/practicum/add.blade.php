@@ -183,6 +183,7 @@
                                     <th width="70">Jumlah Soal</th>
                                     <th width="100">Jenis Jawaban</th>
                                     <th width="50">Penilaian Online</th>
+                                    <th width="50">Soal Ditampilkan oleh Sistem</th>
                                     <th width="30">Hapus</th>
                                 </tr>
                                 </thead>
@@ -236,7 +237,7 @@
                                             </td>
                                             <td>
                                                 <select
-                                                    class="form-control @error('assessments.'.$i.'.answer_type') is-invalid @enderror"
+                                                    class="form-control answer_type @error('assessments.'.$i.'.answer_type') is-invalid @enderror"
                                                     name="assessments[{{$i}}][answer_type]">
                                                     <option></option>
                                                     @foreach($answer_types as $answer_type)
@@ -253,11 +254,21 @@
                                             </td>
                                             <td>
                                                 <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input"
-                                                           id="customCheck{{$i+1}}" value="OPTYS"
+                                                    <input type="checkbox" class="custom-control-input isOnlineCheck"
+                                                           id="isOnlineCheck{{$i+1}}" value="OPTYS"
                                                            name="assessments[{{$i}}][isOnline]" {{ (old('assessments.'.$i.'.isOnline') == 'OPTYS') ? 'checked' : '' }}>
                                                     <label class="custom-control-label"
-                                                           for="customCheck{{$i+1}}">Ya</label>
+                                                           for="isOnlineCheck{{$i+1}}">Ya</label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox"
+                                                           class="custom-control-input isSoftFileQuestionCheck"
+                                                           id="isSoftFileQuestionCheck{{$i+1}}" value="OPTYS"
+                                                           name="assessments[{{$i}}][isSoftFileQuestion]" {{ (old('assessments.'.$i.'.isSoftFileQuestion') == 'OPTYS') ? 'checked' : '' }}>
+                                                    <label class="custom-control-label"
+                                                           for="isSoftFileQuestionCheck{{$i+1}}">Ya</label>
                                                 </div>
                                             </td>
                                             <td>
@@ -287,7 +298,7 @@
                                         </td>
                                         <td>
                                             <select
-                                                class="form-control" name="assessments[0][answer_type]">
+                                                class="form-control answer_type" name="assessments[0][answer_type]">
                                                 <option></option>
                                                 @foreach($answer_types as $answer_type)
                                                     <option
@@ -297,9 +308,20 @@
                                         </td>
                                         <td>
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" value="OPTYS"
-                                                       id="customCheck1" name="assessments[0][isOnline]" checked>
-                                                <label class="custom-control-label" for="customCheck1">Ya</label>
+                                                <input type="checkbox" class="custom-control-input isOnlineCheck"
+                                                       value="OPTYS"
+                                                       id="isOnlineCheck1" name="assessments[0][isOnline]" checked>
+                                                <label class="custom-control-label" for="isOnlineCheck1">Ya</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input isSoftFileQuestion"
+                                                       value="OPTYS"
+                                                       id="isSoftFileQuestionCheck1"
+                                                       name="assessments[0][isSoftFileQuestion]" checked>
+                                                <label class="custom-control-label"
+                                                       for="isSoftFileQuestionCheck1">Ya</label>
                                             </div>
                                         </td>
                                         <td>
@@ -345,6 +367,14 @@
                 $this.datetimepicker('date', $this.val());
             });
             @endif
+        });
+
+        $(function () {
+            $('.isOnlineCheck').change(function () {
+                if ($(this).is(':checked')) {
+                    console.log($(this).closest('.answer_type').html());
+                }
+            });
         });
 
         function add_module() {
@@ -428,9 +458,16 @@
                 '   </td>' +
                 '   <td>' +
                 '       <div class="custom-control custom-checkbox">' +
-                '           <input type="checkbox" class="custom-control-input" id="customCheck' + (i + 1) + '"' +
+                '           <input type="checkbox" class="custom-control-input isOnlineCheck" id="isOnlineCheck' + (i + 1) + '"' +
                 '                  name="assessments[' + i + '][isOnline]" checked>' +
-                '           <label class="custom-control-label" for="customCheck' + (i + 1) + '">Ya</label>' +
+                '           <label class="custom-control-label" for="isOnlineCheck' + (i + 1) + '">Ya</label>' +
+                '       </div>' +
+                '   </td>' +
+                '   <td>' +
+                '       <div class="custom-control custom-checkbox">' +
+                '           <input type="checkbox" class="custom-control-input isSoftFileQuestion" id="isSoftFileQuestionCheck' + (i + 1) + '"' +
+                '                  name="assessments[' + i + '][isSoftFileQuestion]" checked>' +
+                '           <label class="custom-control-label" for="isSoftFileQuestionCheck' + (i + 1) + '">Ya</label>' +
                 '       </div>' +
                 '   </td>' +
                 '   <td>' +

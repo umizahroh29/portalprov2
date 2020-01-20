@@ -10,8 +10,9 @@
             <th scope="col" class="text-center">Praktikum</th>
             <th scope="col" class="text-center">Tahun</th>
             <th scope="col" class="text-center">Status</th>
-            <th scope="col" class="text-center">Lihat Detail</th>
+            <th scope="col" class="text-center">Detail</th>
             <th scope="col" class="text-center">Ubah</th>
+            <th scope="col" class="text-center">Penilaian per Modul</th>
         </tr>
         </thead>
         <tbody>
@@ -27,6 +28,12 @@
                 <td class="text-center">
                     <form action="{{ route('practicums.edit', $practicum) }}" method="GET">
                         <button class="btn btn-primary" type="submit">Ubah</button>
+                    </form>
+                </td>
+                <td class="text-center">
+                    <form action="{{ route('module_assessments.index') }}" method="GET">
+                        <input type="hidden" name="practicum_id" value="{{ $practicum->id }}">
+                        <button class="btn btn-sm btn-primary" type="submit"></button>
                     </form>
                 </td>
             </tr>
