@@ -17,15 +17,17 @@
         <tbody>
         @forelse($practicums as $practicum)
             <tr>
-                <td>{{$loop->iteration}}</td>
-                <td>{{$practicum->name}}</td>
-                <td>{{$practicum->year}}</td>
-                <td>{{$practicum->status->description}}</td>
-                <td>
-                    <button>Detail</button>
+                <td class="text-center">{{$loop->iteration}}</td>
+                <td class="text-center">{{$practicum->name}}</td>
+                <td class="text-center">{{$practicum->year}}</td>
+                <td class="text-center">{{$practicum->status->description}}</td>
+                <td class="text-center">
+                    <button class="btn btn-outline-primary">Detail</button>
                 </td>
-                <td>
-                    <button>Ubah</button>
+                <td class="text-center">
+                    <form action="{{ route('practicums.edit', $practicum) }}" method="GET">
+                        <button class="btn btn-primary" type="submit">Ubah</button>
+                    </form>
                 </td>
             </tr>
         @empty

@@ -5,7 +5,7 @@
 @endif
 @if(session()->has('error'))
     <script>
-        toastr.success('{{ session()->get('error') }}', 'Oops!')
+        toastr.error('{{ session()->get('error') }}', 'Oops!')
     </script>
 @endif
 @if(session()->has('openModal'))

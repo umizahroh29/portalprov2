@@ -9,7 +9,7 @@ class Practicum extends Model
 {
     use Uuid;
 
-    protected $fillable = ['name', 'year', 'activestatus'];
+    protected $fillable = ['name', 'year', 'activestatus', 'laboratory_id'];
 
     public function users()
     {
@@ -29,5 +29,10 @@ class Practicum extends Model
     public function status()
     {
         return $this->belongsTo(Mastercode::class, 'activestatus', 'code');
+    }
+
+    public function laboratory()
+    {
+        return $this->belongsTo(Laboratory::class, 'laboratory_id', 'id');
     }
 }

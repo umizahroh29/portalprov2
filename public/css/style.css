@@ -8,20 +8,41 @@ a:hover {
     text-decoration: none !important;
 }
 
+.table-responsive {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-y: visible;
+    overflow-x: visible;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid #ddd;
+}
+
 .btn-primary {
     color: white;
     border-radius: 20px;
     width: 100px;
-    /*background-color: #AAE5FF;*/
     background-color: #4FCAFF;
     border: none;
 }
 
 .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
-    /*background-color: #4FCAFF;*/
     background-color: white;
     border: 1px solid #4FCAFF;
     color: #4FCAFF;
+}
+
+.btn-outline-primary {
+    color: #4FCAFF;
+    border-radius: 20px;
+    width: 100px;
+    background-color: white;
+    border: 1px solid #4FCAFF;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:active, .btn-outline-primary:focus {
+    background-color: #4FCAFF;
+    border: none;
+    color: white;
 }
 
 .welcome-top {

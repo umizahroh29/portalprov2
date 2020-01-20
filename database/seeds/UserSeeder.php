@@ -19,8 +19,15 @@ class UserSeeder extends Seeder
                 'name' => $user['name'],
                 'class' => $user['class'],
                 'assistant_code' => $user['assistant_code'],
-                'role' => $user['role']
+                'role' => $user['role'],
+                'laboratory_id' => $this->getDasproId()
             ]);
         }
+    }
+
+    private function getDasproId()
+    {
+        $id = \App\Models\Laboratory::where('name', 'DASPRO')->first();
+        return $id->id;
     }
 }

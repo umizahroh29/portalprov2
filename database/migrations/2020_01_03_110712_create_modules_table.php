@@ -19,7 +19,7 @@ class CreateModulesTable extends Migration
             $table->string('name');
             $table->string('module_link')->nullable();
             $table->string('video_link')->nullable();
-            $table->dateTime('input_grade_duedate');
+            $table->dateTime('input_grade_duedate')->nullable();
             $table->dateTime('grade_publish_date');
             $table->timestamps();
 

@@ -17,9 +17,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/dashboard', 'HomeController@index')->name('dashboard');
-
 Route::post('users/check-nim', 'UserController@checkNim')->name('user.check.nim');
 Route::post('users/update-password', 'UserController@updatePassword')->name('user.update.password');
 
-Route::resource('practicums', 'PracticumController')->except(['show']);
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/dashboard', 'HomeController@index')->name('dashboard');
+    Route::resource('practicums', 'PracticumController')->except(['show']);
+});
