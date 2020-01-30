@@ -25,4 +25,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('practicums', 'PracticumController')->except(['show']);
 
     Route::resource('module_assessments', 'ModuleAssessmentController')->except(['show']);
+
+
+    //input nilai
+    Route::get('/inputnilai', 'GradeController@index');
+    Route::post('/submit-nilai', 'GradeController@store');
+    Route::get('/list-nilai', 'GradeController@view');
 });
